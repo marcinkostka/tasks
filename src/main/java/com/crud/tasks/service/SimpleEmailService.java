@@ -32,7 +32,7 @@ public class SimpleEmailService {
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
-        if (!(mail.getToCC() == null)) mailMessage.setCc(mail.getToCC());
+        if (mail.getToCC() != null) mailMessage.setCc(mail.getToCC());
         return mailMessage;
     }
 }
