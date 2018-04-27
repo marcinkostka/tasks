@@ -46,7 +46,7 @@ public class TrelloMapperTest {
         trelloBoard.add(new TrelloBoard("1","boardName", trelloList));
 
         //When
-        List<TrelloBoardDto> mappedTrelloBoardDto = trelloMapper.mapAToBoardsDto(trelloBoard);
+        List<TrelloBoardDto> mappedTrelloBoardDto = trelloMapper.mapToBoardsDto(trelloBoard);
 
         //Then
         assertEquals(1, mappedTrelloBoardDto.size());

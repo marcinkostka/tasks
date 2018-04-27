@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class TrelloValidator {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TrelloFacade.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TrelloValidator.class);
 
     public List<TrelloBoard> validateTrelloBoards(final List<TrelloBoard> trelloBoards) {
         LOGGER.info("Starting filtering boards...");
