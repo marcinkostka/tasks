@@ -36,6 +36,7 @@ dependencies {
 	compile('io.springfox:springfox-swagger2:2.7.0')
 	compile('io.springfox:springfox-swagger-ui:2.7.0')
 	compile('org.springframework.boot:spring-boot-starter-mail:2.0.1.RELEASE')
+	compile('com.google.code.gson:gson:2.8.2')
 
 	//providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
@@ -43,6 +44,5 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-mail')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-	compile('com.google.code.gson:gson:2.8.2')
 	*/
 }
