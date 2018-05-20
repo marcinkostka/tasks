@@ -1,3 +1,4 @@
+
 package com.crud.tasks.service;
 
 import com.crud.tasks.domain.Mail;
@@ -8,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessagePreparator;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
@@ -27,15 +29,21 @@ public class SimpleEmailServiceTest {
         //Given
         Mail mail = new Mail("test@test.com",null,"Test","Test message");
 
+        MimeMessagePreparator mimeMailMessage = simpleEmailService.createMimeMessage(mail);
+
+        /*
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
         //if (!(mail.getToCC() == null)) mailMessage.setCc(mail.getToCC());
+        */
+
         //When
-        simpleEmailService.send(mail);
+        //simpleEmailService.send(mail);
+        javaMailSender.send(mimeMailMessage);
 
         //Then
-        verify(javaMailSender, times(1)).send(mailMessage);
+        verify(javaMailSender, times(1)).send(mimeMailMessage);
     }
 }
