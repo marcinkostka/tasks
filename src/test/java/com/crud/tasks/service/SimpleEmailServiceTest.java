@@ -29,7 +29,7 @@ public class SimpleEmailServiceTest {
         //Given
         Mail mail = new Mail("test@test.com",null,"Test","Test message");
 
-        MimeMessagePreparator mimeMailMessage = simpleEmailService.createMimeMessage(mail);
+        MimeMessagePreparator mimeMailMessage = simpleEmailService.createMimeMessage(mail, SimpleEmailService.STANDARD_MAIL);
 
         /*
         SimpleMailMessage mailMessage = new SimpleMailMessage();
